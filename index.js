@@ -13,7 +13,7 @@ function displayMenuItems(menu) {
     // Loop through each category and its items in the menu object
     for (const category in menu) {
         // Create an element to represent the category
-        const categoryElement = document.createElement('h2');
+        const categoryElement = document.createElement('h3');
         categoryElement.textContent = category;
 
         // Append the category element to the menu container
@@ -56,7 +56,7 @@ function addToOrder(itemName) {
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Delete';
     deleteButton.style.marginLeft = '10px';
-    deleteButton.style.backgroundColor = 'red';
+    deleteButton.style.backgroundColor = 'blue';
     deleteButton.style.color = 'white';
 
     // Attach the delete functionality to the button

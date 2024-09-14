@@ -6,8 +6,8 @@ body, h1, h2, p, ul {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    margin: 0; /* Add this to reset body margin */
+    background-image:url("/images/cuisine.jpg");
+    margin: 0; 
 }
 
 header {
@@ -31,9 +31,11 @@ main {
     justify-content: space-between;
     margin: 2rem;
 }
-
+#menu-container {
+    background-color: rgba(216, 215, 215, 0.7); 
+}
 #menu, #order {
-    background-color: #fff;
+    background-color:  rgba(216, 215, 215, 0.7);
     padding: 1rem;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
