@@ -40,3 +40,30 @@ function displayMenuItems(menu) {
         menuContainer.appendChild(itemList);
     }
 }
+// Callback function for adding an item to the order
+function addToOrder(itemName) {
+    // Get the order items list and the order total element from the HTML
+    const orderItemsList = document.getElementById('order-items');
+    const orderTotalElement = document.getElementById('order-total');
+
+    // Create a list item for the order
+    const orderItem = document.createElement('li');
+    orderItem.textContent = itemName;
+
+    // Append the list item to the order items list
+    orderItemsList.appendChild(orderItem);
+
+    // Calculate and update the total price (assuming each item costs R10 for simplicity)
+    const currentTotal = parseFloat(orderTotalElement.textContent.replace('R', '')) || 0;  // Adjusted to remove 'R'
+    const newTotal = currentTotal + 10;
+    orderTotalElement.textContent = `R${newTotal.toFixed(2)}`;  // Adjusted to show 'R'
+}
+
+// Function to initialize the menu system
+function initMenuSystem(menu) {
+    // Call the function to display menu items
+    displayMenuItems(menu);
+}
+
+// Start the menu system by calling the init function
+initMenuSystem(menu);
